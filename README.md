@@ -1,7 +1,3 @@
-![ESLint](https://github.com/stryder03/bckstudio-on-zeitnow/workflows/ESLint/badge.svg)
-[![CircleCI](https://circleci.com/gh/justin-elias/bckstudio-on-zeitnow.svg?style=shield)](https://app.circleci.com/pipelines/github/justin-elias/bckstudio-on-zeitnow)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=justin-elias_bckstudio-on-zeitnow&metric=alert_status)](https://sonarcloud.io/dashboard?id=justin-elias_bckstudio-on-zeitnow)
-
 # [Bozeman Community Kiln Website](https://bckstudio.com)
 [![Website](https://img.shields.io/website?down_color=red&down_message=offline&label=bckStudio.com&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fbckstudio.com)](https://bckstudio.com)
 
