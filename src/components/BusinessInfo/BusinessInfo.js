@@ -38,9 +38,13 @@ export default function BusinessInfo(props) {
                 <GridItem xs={12} sm={12} md={3}>
                     <h2 className={classNames(classes.title, classes.centered)}>HOURS</h2>
                     <Typography variant={"body1"} className={classes.centered}>
-                        Tuesday &amp; Wednesday 8:30AM - 5:30PM NightOwls: 9:00PM-12:00AM
+                        Tuesday &amp; Wednesday 8:30AM - 5:30PM
                         <br/>
-                        Thursday - Saturday 9:00AM - 6:30PM NightOwls: 9:30PM-12:00AM
+                        NightOwl: 9:00PM-12:00AM
+                        <br/>
+                        Thursday - Saturday 9:00AM - 6:30PM
+                        <br/>
+                        NightOwl: 9:30PM-12:00AM
                         <br/>
                         Closed Sunday &amp; Monday
                     </Typography>
