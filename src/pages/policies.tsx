@@ -12,6 +12,7 @@ import Link from "next/link";
 import { relative } from "path";
 import Divider from "@material-ui/core/Divider";
 import React from "react";
+import moment from "moment";
 
 const useStyles = makeStyles(() => createStyles({
     playBrand,
@@ -22,6 +23,9 @@ const useStyles = makeStyles(() => createStyles({
     policiesBlock: {
         margin: "1.5rem",
         marginTop: "3rem"
+    },
+    lastUpdate: {
+        marginTop: "2rem"
     }
 }));
 
@@ -45,8 +49,8 @@ const options = {
                 variant: 'h1',
             },
         },
-        h2: { component: Typography, props: { gutter: true, variant: 'h2', align: 'center'} },
-        h3: { component: Typography, props: { gutter: true, variant: 'h3' } },
+        h2: { component: Typography, props: { gutterBottom: true, variant: 'h2', align: 'center'} },
+        h3: { component: Typography, props: { gutterBottom: true, variant: 'h3' } },
 
         p: { component: Typography, props: { variant: "body1" } },
         a: { component: Link },
@@ -73,14 +77,25 @@ export default function homePage(props: { policies: any; }) {
     const classes: ClassNameMap = useStyles();
     const { policies } = props;
 
+    // Return the date of the most recent change to the policies
+    const latestUpdate = () => {
+        let updated: Date | null = null
+
+        policies.policies.map((policy: { updatedAt: string | number | Date; }) => {
+            const temp = new Date(policy.updatedAt);
+            updated =  updated || updated! >= temp ? updated : temp
+            return updated
+        })
+        return moment(updated).format("LL")
+    }
+
     return (
         <div>
             <Head>
                 <title>Pottery Classes & Studio • Bozeman Community Kiln</title>
                 <link rel="canonical" href="https://bckstudio.com/policies"/>
                 <meta name="description"
-                      content="Whether you are interested in a first clay encounter, looking for the perfect pottery
-                      class, or need your own ceramic studio space, Bozeman Community Kiln is here."
+                      content="Bozeman Community Kiln's Membership and class policies"
                 />
             </Head>
             <Layout className={classes.layout}>
@@ -89,9 +104,10 @@ export default function homePage(props: { policies: any; }) {
                         Our <span className={classes.playBrand}>Policies</span>
                     </Typography>
                 </BrandedHeader>
+                <Typography variant={"subtitle1"} align={"center"} className={classes.lastUpdate}>Last Updated: {latestUpdate()}</Typography>
                 {policies.policies.map((policy: any) => {
                     return (
-                        <div id={policy.policyName} className={classes.policiesBlock}>
+                        <div id={policy.policyName} className={classes.policiesBlock} key={policy.policyName}>
                             <Typography variant={"h2"} >
                                 {policy.policyName}
                             </Typography>
