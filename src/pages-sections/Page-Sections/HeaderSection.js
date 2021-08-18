@@ -75,7 +75,7 @@ export default function HeaderSection(props) {
                 />
             </Hidden>
             <Hidden smDown>
-                <Toolbar className={classes.bannerAd}><Typography variant={"h4"} className={classes.text}>We'll Be on the Emerson Lawn for SLAM! August 7th 11am-7pm</Typography></Toolbar>
+                <Toolbar className={classes.bannerAd}><Typography variant={"h4"} className={classes.text}>Sale Finale! Smash Party, Raffle & Silent Auction on August 28, 9am-6:30pm</Typography></Toolbar>
                 </Hidden>
             <div className={classes.banner}>
                 <Hidden smDown>
