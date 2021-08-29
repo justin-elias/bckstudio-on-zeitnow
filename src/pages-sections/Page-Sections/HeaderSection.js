@@ -6,7 +6,6 @@ import { Hidden, Typography } from "@material-ui/core";
 import SmallHeader from "../../components/Header/SmallHeader";
 import Image from "next/image";
 import { createStyles, makeStyles} from "@material-ui/core/styles";
-import Toolbar from "@material-ui/core/Toolbar";
 
 const useStyles = makeStyles(() => createStyles({
     banner: {
@@ -21,18 +20,7 @@ const useStyles = makeStyles(() => createStyles({
         marginTop: "-15rem",
         marginBottom: "5rem"
     },
-    bannerAd: {
-        backgroundColor: "white",
-        width: "100vw",
-        marginTop: "4.5rem",
-        position: "absolute",
-        zIndex: "1",
-    },
-    text: {
-        margin: "auto",
-        align: "center",
-        justify: "center"
-    }
+
 }))
 
 export default function HeaderSection(props) {
@@ -74,9 +62,6 @@ export default function HeaderSection(props) {
                     {...rest}
                 />
             </Hidden>
-            <Hidden smDown>
-                <Toolbar className={classes.bannerAd}><Typography variant={"h4"} className={classes.text}>Sale Finale! Smash Party, Raffle & Silent Auction on August 28, 9am-6:30pm</Typography></Toolbar>
-                </Hidden>
             <div className={classes.banner}>
                 <Hidden smDown>
                     <Image src={"https://media.graphcms.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} priority/>
