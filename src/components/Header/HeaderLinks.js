@@ -64,11 +64,20 @@ export default function HeaderLinks() {
                   </Link>
               </ListItem>
               <ListItem className={classes.listItem} color={primaryColor}>
-                  <Link href={"/classes-encounters"} passHref>
+                  <Link href={"/classes"} passHref>
                       <Button
                           color="transparent"
                           className={classes.navLink}
-                      ><Typography variant={"body1"} className={classes.navText}>Classes & Encounters</Typography>
+                      ><Typography variant={"body1"} className={classes.navText}>Classes</Typography>
+                      </Button>
+                  </Link>
+              </ListItem>
+              <ListItem className={classes.listItem} color={primaryColor}>
+                  <Link href={"/encounters"} passHref>
+                      <Button
+                          color="transparent"
+                          className={classes.navLink}
+                      ><Typography variant={"body1"} className={classes.navText}>Encounters</Typography>
                       </Button>
                   </Link>
               </ListItem>

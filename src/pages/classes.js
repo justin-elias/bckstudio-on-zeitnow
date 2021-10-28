@@ -160,7 +160,7 @@ export async function getStaticProps(context) {
     }
 }
 
-export default function ClassesEncounters(props) {
+export default function Classes(props) {
     const classes = useStyles();
     const { classListQueryResult, defaultInstructor, preview } = props;
 
@@ -168,16 +168,20 @@ export default function ClassesEncounters(props) {
 
         let result = [];
         classList.classCategories.map((category, index) => {
-            result.push(<ClassList index={index} classList={category} key={category.categoryTitle} title={category.categoryTitle} defaultInstructor={defaultInstructor}/>)
-        })
+            if( category.categoryTitle !== "Encounters") {
+                result.push(<ClassList index={index} classList={category}
+                                       key={category.categoryTitle} title={category.categoryTitle}
+                                       defaultInstructor={defaultInstructor}/>)
+            }
+            })
         return result
     };
 
     return (
         <div>
             <Head>
-                <title>Clay Classes & Encounters • Bozeman Community Kiln</title>
-                <link rel="canonical" href="https://bckstudio.com/classes-encounters/"/>
+                <title>Clay Classes • Bozeman Community Kiln</title>
+                <link rel="canonical" href="https://bckstudio.com/classes/"/>
                 <meta name="description"
                       content="Join us for one of our classes to learn a variety of pottery techniques from local artists, or try our clay encounters, a one-time visit great for playing with clay."/>
             </Head>
