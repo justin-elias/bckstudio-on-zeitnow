@@ -189,7 +189,7 @@ export default function Encounters(props) {
             <Layout>
                 <BrandedHeader>
                     <Typography variant={"h1"} align={"center"} className={classNames(classes.brandFont)} gutterBottom>
-                        LEARN.<span className={classes.playBrand}> PLAY</span><span className={classNames(classes.playExclaim, classes.playBrand)}>!</span>
+                        <span className={classes.playBrand}> PLAY</span><span className={classNames(classes.playExclaim, classes.playBrand)}>!</span>
                     </Typography>
                     <div className={classes.textBody}>
                         <Typography variant={"body1"} component={"p"} align={"center"}>
