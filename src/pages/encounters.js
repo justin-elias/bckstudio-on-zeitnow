@@ -193,15 +193,7 @@ export default function Encounters(props) {
                     </Typography>
                     <div className={classes.textBody}>
                         <Typography variant={"body1"} component={"p"} align={"center"}>
-                            Thank you for being interested in our Encounters! We want to make ceramics,
-                            pottery and clay an affordable, entertaining past time for everyone. Here is a quick
-                            guide to help you understand how our system works: Memberships keep us open and allow our
-                            members to have access to the studio and equipment. Classes, on the other hand, directly
-                            support local, working artists! During regular open studio hours, Ashleah and Heather
-                            are available to meet the individualized needs of members. For more advanced ceramicists
-                            and individuals that want access outside of these hours, we have memberships that grant
-                            access to facilities up to 24/7. After hours, Artists rent the entire studio to teach
-                            their own classes. Read on to find the option that speaks to you!
+                            Thank you for your interest in our Encounters. Like classes, Encounters directly support local, working artists. These artists rent the studio after regular business hours to lead single visit clay experiences. Encounters provide those looking for a fun night out an opportunity to play in the clay. Scroll down to learn more and book your clay Encounter!
                         </Typography>
                     </div>
                 </BrandedHeader>

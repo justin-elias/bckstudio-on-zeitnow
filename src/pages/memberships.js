@@ -44,6 +44,11 @@ const style = (theme) => ({
         ...mainElement,
         marginTop: "0"
     },
+    textBody: {
+        maxWidth: "50vw",
+        margin: "auto",
+        paddingBottom: "2.5rem"
+    },
     mainElement,
     title,
     brandFont,
@@ -111,6 +116,11 @@ export default function MembershipPage(props) {
                         <Typography variant={"h1"} align={"center"} className={classNames(classes.brandFont)} gutterBottom>
                             CREATE.
                         </Typography>
+                        <div className={classes.textBody}>
+                            <Typography variant={"body1"} component={"p"} align={"center"}>
+                                Thank you for your interest in joining our clay family. Memberships keep us open and allow members access to the studio and equipment up to 24/7. During regular business hours, Ashleah and Heather are available to meet the individualized needs of our members. Read the membership descriptions below and find the one that's right for you.
+                            </Typography>
+                        </div>
                     </BrandedHeader>
                     <Hidden smDown>
                         <Container component="main" maxWidth={"lg"}>
