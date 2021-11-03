@@ -66,7 +66,7 @@ export default function CLPSection() {
               Not sure if diving into membership is for you? Try a class and support local artists!
             </Typography>
             <Hidden mdUp>
-              <PrimaryContainedButton href={"/classes-encounters"}>
+              <PrimaryContainedButton href={"/classes"}>
                 Come Learn
               </PrimaryContainedButton>
             </Hidden>
@@ -87,7 +87,7 @@ export default function CLPSection() {
               Join us for a clay encounter. We have a variety to choose from every month!
             </Typography>
             <Hidden mdUp>
-              <Link href={"classes-encounters/#play"} passHref>
+              <Link href={"encounters"} passHref>
                 <PrimaryContainedButton>
                   Come Play
                 </PrimaryContainedButton>
@@ -103,12 +103,12 @@ export default function CLPSection() {
                   </PrimaryContainedButton>
                 </GridItem>
                 <GridItem md={3}>
-                  <PrimaryContainedButton href={"/classes-encounters"}>
+                  <PrimaryContainedButton href={"/classes"}>
                     Come Learn
                   </PrimaryContainedButton>
                 </GridItem>
                 <GridItem md={3}>
-                  <PrimaryContainedButton href={"classes-encounters#play"}>
+                  <PrimaryContainedButton href={"/encounters"}>
                     Come Play
                   </PrimaryContainedButton>
                 </GridItem>

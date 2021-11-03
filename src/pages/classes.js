@@ -160,7 +160,7 @@ export async function getStaticProps(context) {
     }
 }
 
-export default function ClassesEncounters(props) {
+export default function Classes(props) {
     const classes = useStyles();
     const { classListQueryResult, defaultInstructor, preview } = props;
 
@@ -168,36 +168,32 @@ export default function ClassesEncounters(props) {
 
         let result = [];
         classList.classCategories.map((category, index) => {
-            result.push(<ClassList index={index} classList={category} key={category.categoryTitle} title={category.categoryTitle} defaultInstructor={defaultInstructor}/>)
-        })
+            if( category.categoryTitle !== "Encounters") {
+                result.push(<ClassList index={index} classList={category}
+                                       key={category.categoryTitle} title={category.categoryTitle}
+                                       defaultInstructor={defaultInstructor}/>)
+            }
+            })
         return result
     };
 
     return (
         <div>
             <Head>
-                <title>Clay Classes & Encounters • Bozeman Community Kiln</title>
-                <link rel="canonical" href="https://bckstudio.com/classes-encounters/"/>
+                <title>Clay Classes • Bozeman Community Kiln</title>
+                <link rel="canonical" href="https://bckstudio.com/classes/"/>
                 <meta name="description"
                       content="Join us for one of our classes to learn a variety of pottery techniques from local artists, or try our clay encounters, a one-time visit great for playing with clay."/>
             </Head>
-            <ShowPreview preview={preview} page={"classes-encounters"}/>
+            <ShowPreview preview={preview} page={"classes"}/>
             <Layout>
                 <BrandedHeader>
                     <Typography variant={"h1"} align={"center"} className={classNames(classes.brandFont)} gutterBottom>
-                        LEARN.<span className={classes.playBrand}> PLAY</span><span className={classNames(classes.playExclaim, classes.playBrand)}>!</span>
+                        LEARN.
                     </Typography>
                     <div className={classes.textBody}>
                         <Typography variant={"body1"} component={"p"} align={"center"}>
-                            Thank you for being interested in our Classes and Encounters! We want to make ceramics,
-                            pottery and clay an affordable, entertaining past time for everyone. Here is a quick
-                            guide to help you understand how our system works: Memberships keep us open and allow our
-                            members to have access to the studio and equipment. Classes, on the other hand, directly
-                            support local, working artists! During regular open studio hours, Ashleah and Heather
-                            are available to meet the individualized needs of members. For more advanced ceramicists
-                            and individuals that want access outside of these hours, we have memberships that grant
-                            access to facilities up to 24/7. After hours, Artists rent the entire studio to teach
-                            their own classes. Read on to find the option that speaks to you!
+                            Thank you for your interest in our classes. Classes at BCK directly support local, working artists. After regular studio hours, artists rent the studio to teach curriculum they create, creating more variety and opportunities for you to learn the art of ceramics. Read on to find the adult or youth class that speaks to you.
                         </Typography>
                     </div>
                 </BrandedHeader>

@@ -46,14 +46,23 @@ export default function Footer(props) {
                     </Link>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
-                    <Link href={"/classes-encounters"} passHref>
+                    <Link href={"/classes"} passHref>
                     <a
                       className={classes.block}
                     >
-                      Classes & Encounters
+                      Classes
                     </a>
                     </Link>
                   </ListItem>
+                <ListItem className={classes.inlineBlock}>
+                  <Link href={"/encounters"} passHref>
+                    <a
+                        className={classes.block}
+                    >
+                      Encounters
+                    </a>
+                  </Link>
+                </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <Link href={"/policies"} passHref>
                     <a
