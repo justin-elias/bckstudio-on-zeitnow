@@ -24,6 +24,20 @@ module.exports = withPlugins([[withSourceMaps]], {
     images: {
         domains: ['media.graphcms.com'],
     },
+    async redirects() {
+        return [
+            {
+                source: '/classes-encounters',
+                destination: '/classes/',
+                permanent: true,
+            },
+            {
+                source: '/classes-encounters/',
+                destination: '/classes/',
+                permanent: true,
+            },
+        ]
+    },
     webpack(config, options) {
         config.resolve.modules.push(path.resolve("./"));
         const { dir } = options

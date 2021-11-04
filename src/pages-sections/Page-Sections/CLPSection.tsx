@@ -66,7 +66,7 @@ export default function CLPSection() {
               Not sure if diving into membership is for you? Try a class and support local artists!
             </Typography>
             <Hidden mdUp>
-              <PrimaryContainedButton href={"/classes"}>
+              <PrimaryContainedButton href={"/classes/"}>
                 Come Learn
               </PrimaryContainedButton>
             </Hidden>
@@ -103,7 +103,7 @@ export default function CLPSection() {
                   </PrimaryContainedButton>
                 </GridItem>
                 <GridItem md={3}>
-                  <PrimaryContainedButton href={"/classes"}>
+                  <PrimaryContainedButton href={"/classes/"}>
                     Come Learn
                   </PrimaryContainedButton>
                 </GridItem>

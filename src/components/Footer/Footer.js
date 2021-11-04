@@ -46,7 +46,7 @@ export default function Footer(props) {
                     </Link>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
-                    <Link href={"/classes"} passHref>
+                    <Link href={"/classes/"} passHref>
                     <a
                       className={classes.block}
                     >

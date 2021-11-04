@@ -64,7 +64,7 @@ export default function HeaderLinks() {
                   </Link>
               </ListItem>
               <ListItem className={classes.listItem} color={primaryColor}>
-                  <Link href={"/classes"} passHref>
+                  <Link href={"/classes/"} passHref>
                       <Button
                           color="transparent"
                           className={classes.navLink}
