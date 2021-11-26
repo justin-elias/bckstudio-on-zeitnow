@@ -21,8 +21,7 @@ const useStyles = makeStyles((theme) => createStyles({
             paddingTop: "0.5rem",
         },
         [theme.breakpoints.between("md", "lg")]:{
-            marginTop: "-1.5rem",
-            paddingTop: "1.5rem",
+            marginTop: "3.5rem",
         },
     },
     text: {
