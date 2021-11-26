@@ -34,9 +34,7 @@ export default function Layout(props) {
 
     return (
         <div>
-            <Hidden smDown>
-                <Banner/>
-            </Hidden>
+            <Banner/>
             <HeaderSection wrapH1={wrapH1}/>
             <main role="main">
                 <Hidden smDown>
@@ -45,7 +43,6 @@ export default function Layout(props) {
                     </div>
                 </Hidden>
                 <Hidden mdUp>
-                    <Banner/>
                     <div className={classNames(classes.mainElement, classes.small)} id={"mainElement"}>
                         {props.children}
                     </div>

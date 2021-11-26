@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => createStyles({
         width: "100vw",
         marginTop: "4.5rem",
         position: "absolute",
-        zIndex: 1,
+        zIndex: 3,
         "&:hover": {
             backgroundColor: "black",
             color: "white",
