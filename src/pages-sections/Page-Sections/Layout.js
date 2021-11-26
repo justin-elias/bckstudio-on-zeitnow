@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 import {Hidden} from "@material-ui/core";
+import Banner from "../../components/Banner/Banner";
 
 
 const style = ({
@@ -33,6 +34,7 @@ export default function Layout(props) {
 
     return (
         <div>
+            <Banner/>
             <HeaderSection wrapH1={wrapH1}/>
             <main role="main">
                 <Hidden smDown>
