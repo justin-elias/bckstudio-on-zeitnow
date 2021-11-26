@@ -49,6 +49,8 @@ export default function Banner(props: BckAppProps) {
                         <Typography variant={"h4"} className={classes.text}>Black Friday Sales!</Typography>
                     </Toolbar>
                 </Link>
+                <br/>
+                <br/>
             </Hidden>
         </React.Fragment>
     );
