@@ -16,10 +16,9 @@ const useStyles = makeStyles((theme) => createStyles({
             backgroundColor: "black",
             color: "white",
         },
-        breakpointSmallDown: {
-            marginTop: "3.5rem",
+        [theme.breakpoints.down("sm")]:{
+            marginTop: "3rem",
         },
-
     },
     text: {
         margin: "auto",
