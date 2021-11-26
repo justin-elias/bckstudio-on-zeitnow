@@ -46,11 +46,9 @@ export default function Banner(props: BckAppProps) {
             <Hidden mdUp>
                 <Link href={"/holiday-specials/"} passHref>
                     <Toolbar className={classes.bannerAd}>
-                        <Typography variant={"h4"} className={classes.text}>Black Friday Sales!</Typography>
+                        <Typography variant={"h4"} className={classes.text}>Tap for Black Friday Sales!</Typography>
                     </Toolbar>
                 </Link>
-                <br/>
-                <br/>
             </Hidden>
         </React.Fragment>
     );
