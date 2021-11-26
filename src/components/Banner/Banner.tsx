@@ -5,7 +5,7 @@ import {Hidden, Typography} from "@material-ui/core";
 import { BckAppProps } from "../../index";
 import Link from "next/link";
 
-const useStyles = makeStyles(() => createStyles({
+const useStyles = makeStyles((theme) => createStyles({
     bannerAd: {
         backgroundColor: "white",
         width: "100vw",
@@ -15,6 +15,9 @@ const useStyles = makeStyles(() => createStyles({
         "&:hover": {
             backgroundColor: "black",
             color: "white",
+        },
+        breakpointSmallDown: {
+            marginTop: "3.5rem",
         },
 
     },
