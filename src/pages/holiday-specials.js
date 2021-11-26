@@ -125,11 +125,9 @@ export default function MembershipPage(props) {
             <div>
                 <ShowPreview preview={preview} page={"holiday-specials"}/>
                 <Layout>
-                    <br/>
-                    <br/>
                     <BrandedHeader>
                         <Typography variant={"h1"} align={"center"} className={classNames(classes.brandFont)} gutterBottom>
-                            Black Friday & Cyber Monday Specials!
+                            Specials!
                         </Typography>
                         <div className={classes.textBody}>
                             <Typography variant={"body1"} component={"p"} align={"center"}>
