@@ -8,15 +8,22 @@ import Link from "next/link";
 const useStyles = makeStyles(() => createStyles({
     bannerAd: {
         backgroundColor: "white",
+        '&hover': {
+            backgroundColor: "black",
+        },
         width: "100vw",
         marginTop: "4.5rem",
         position: "absolute",
         zIndex: 1,
+
     },
     text: {
         margin: "auto",
         align: "center",
-        justify: "center"
+        justify: "center",
+        color: "black", "&hover": {
+            color: "white",
+        },
     }
 }));
 

@@ -127,7 +127,7 @@ export default function MembershipPage(props) {
                 <Layout>
                     <BrandedHeader>
                         <Typography variant={"h1"} align={"center"} className={classNames(classes.brandFont)} gutterBottom>
-                            CREATE.
+                            Black Friday & Cyber Monday Specials!
                         </Typography>
                         <div className={classes.textBody}>
                             <Typography variant={"body1"} component={"p"} align={"center"}>
