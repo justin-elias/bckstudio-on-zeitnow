@@ -8,7 +8,7 @@ import Link from "next/link";
 const useStyles = makeStyles(() => createStyles({
     bannerAd: {
         backgroundColor: "white",
-        '&hover': {
+        '&:hover': {
             backgroundColor: "black",
         },
         width: "100vw",
@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => createStyles({
         margin: "auto",
         align: "center",
         justify: "center",
-        color: "black", "&hover": {
+        color: "black", "&:hover": {
             color: "white",
         },
     }
