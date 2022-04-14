@@ -42,7 +42,7 @@ function SmallHeader(props) {
           >
             <Menu />
           </IconButton>
-        <LogoButton href={"/"} width={"143px"} height={"40px"} src={"https://media.graphcms.com/XMAKIRSSVyM1QPf2Y8hG"}/>
+        <LogoButton href={"/"} width={"143px"} height={"40px"} src={"https://media.graphassets.com/XMAKIRSSVyM1QPf2Y8hG"}/>
         <BookServiceDialog className={classNames(classes.heroButton)} buttonText={"Book Now"} size={size}/>
       </Toolbar>
         <Drawer

@@ -75,8 +75,8 @@ export default function ClassList(props) {
     const classes = useStyles();
     const { classList, title, defaultInstructor, index } = props;
 
-    const vCone = "https://media.graphcms.com/hfaJUnYBRIC8AySsGbkB"
-    const hCone = "https://media.graphcms.com/MFyMrP7IQisembYJM4k6"
+    const vCone = "https://media.graphassets.com/hfaJUnYBRIC8AySsGbkB"
+    const hCone = "https://media.graphassets.com/MFyMrP7IQisembYJM4k6"
 
     const disableBookDialogButton = (clayClass, deviceSize) => {
 

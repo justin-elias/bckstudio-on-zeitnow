@@ -22,7 +22,7 @@ module.exports = withPlugins([[withSourceMaps]], {
     pageExtensions: ['jsx', 'js', 'ts', 'tsx', 'mdx', 'md'],
     // Allowed domains for image optimization
     images: {
-        domains: ['media.graphcms.com'],
+        domains: ['media.graphassets.com'],
     },
     async redirects() {
         return [

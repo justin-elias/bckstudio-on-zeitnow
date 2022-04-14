@@ -72,7 +72,7 @@ export default function AboutSection(props) {
   const classes = useStyles();
   const { staff } = props;
 
-  const hCones = "https://media.graphcms.com/MFyMrP7IQisembYJM4k6";
+  const hCones = "https://media.graphassets.com/MFyMrP7IQisembYJM4k6";
   const width = 258;
   const height = 336;
 
