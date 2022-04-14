@@ -21,7 +21,7 @@ export default function MainLogo() {
             <GridContainer>
                 <GridItem xs={12} sm={12} md={6}>
                     <Hidden smDown>
-                        <Image src={"https://media.graphcms.com/XMAKIRSSVyM1QPf2Y8hG"} alt={"Bozeman Community Kiln"} height={"197"} width={"704"}/>
+                        <Image src={"https://media.graphassets.com/XMAKIRSSVyM1QPf2Y8hG"} alt={"Bozeman Community Kiln"} height={"197"} width={"704"}/>
                     </Hidden>
                 </GridItem>
             </GridContainer>
