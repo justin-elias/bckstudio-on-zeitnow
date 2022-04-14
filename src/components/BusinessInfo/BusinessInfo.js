@@ -51,12 +51,12 @@ export default function BusinessInfo(props) {
                 </GridItem>
                 <Hidden smDown>
                     <div className={classes.vertCones}>
-                        <Image src={"https://media.graphcms.com/hfaJUnYBRIC8AySsGbkB"} alt={"Vertical divider which shows temperature cones at various stages of drooping"} height={"160"} width={"12"}/>
+                        <Image src={"https://media.graphassets.com/hfaJUnYBRIC8AySsGbkB"} alt={"Vertical divider which shows temperature cones at various stages of drooping"} height={"160"} width={"12"}/>
                     </div>
                 </Hidden>
                 <Hidden mdUp>
                     <div className={classes.horizCones}>
-                        <Image src={"https://media.graphcms.com/MFyMrP7IQisembYJM4k6"} alt={"Horizontal divider which shows temperature cones at various stages of drooping"} height={"32"} width={"240"}/>
+                        <Image src={"https://media.graphassets.com/MFyMrP7IQisembYJM4k6"} alt={"Horizontal divider which shows temperature cones at various stages of drooping"} height={"32"} width={"240"}/>
                     </div>
                 </Hidden>
                 <GridItem xs={12} sm={12} md={3}>

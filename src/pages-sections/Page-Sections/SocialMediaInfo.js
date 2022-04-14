@@ -21,12 +21,12 @@ export default function SocialMediaInfo() {
             <GridContainer spacing={0} justify={"center"}>
                 <GridItem xs={2} sm={2} md={1}>
                     <a href={"https://www.facebook.com/BozemanCommunityKiln"} rel="noopener noreferrer" target={"_blank"}>
-                        <Image src={"https://media.graphcms.com/8KDmAb7aTjGw6RsxKkIa"} alt={"Follow on Facebook"} className={classes.icon} width={"40px"} height={"40px"}/>
+                        <Image src={"https://media.graphassets.com/8KDmAb7aTjGw6RsxKkIa"} alt={"Follow on Facebook"} className={classes.icon} width={"40px"} height={"40px"}/>
                     </a>
                 </GridItem>
                 <GridItem xs={2} sm={2} md={1}>
                     <a href={"https://www.instagram.com/bckiln/"} rel="noopener noreferrer" target={"_blank"}>
-                        <Image src={"https://media.graphcms.com/pOsoM4xoSNiGPWq5d1Jg"} alt={"Follow on Instagram"} className={classes.icon} width={"40px"} height={"40px"}/>
+                        <Image src={"https://media.graphassets.com/pOsoM4xoSNiGPWq5d1Jg"} alt={"Follow on Instagram"} className={classes.icon} width={"40px"} height={"40px"}/>
                     </a>
                 </GridItem>
             </GridContainer>
