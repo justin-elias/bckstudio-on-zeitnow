@@ -40,7 +40,7 @@ const useStyles = makeStyles(style);
 
 export default function ContactPage() {
     const classes = useStyles();
-    const gKey = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJrb7LA0RJRVMRLThXYkgPKbk&key=" + process.env.NEXT_PUBLIC_MAPS_KEY;
+    const gKey = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJAzRZ7TxERVMRoCq4nBbxjJQ&key=" + process.env.NEXT_PUBLIC_MAPS_KEY;
     return (
         <div>
             <Head>
