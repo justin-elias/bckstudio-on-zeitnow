@@ -49,7 +49,7 @@ export interface MembershipTier {
 }
 
 export interface BckAppProps extends AppProps {
-    err: Event;
+    err?: Event;
     children?: ReactNode;
     user?: BckUser;
     logout?: firebase.auth.Auth;

@@ -9,6 +9,7 @@ import BrandedHeader from "../components/BrandedHeader/BrandedHeader";
 import gql from "graphql-tag";
 import {queryCMS} from "../utils/queryCMS";
 import shuffleArray from "../utils/algos/shuffleArray";
+import Banner from "../components/Banner/Banner";
 
 
 const staffQuery = gql`{
@@ -67,6 +68,7 @@ export default function homePage(props) {
                       class, or need your own ceramic studio space, Bozeman Community Kiln is here."
                 />
             </Head>
+            <Banner/>
             <Layout>
                 <BrandedHeader>
                     <CLPSection/>

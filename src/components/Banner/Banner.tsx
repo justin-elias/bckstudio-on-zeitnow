@@ -31,24 +31,22 @@ const useStyles = makeStyles((theme) => createStyles({
     }
 }));
 
-export default function Banner(props: BckAppProps) {
+export default function Banner() {
     const classes = useStyles();
-    const {} = props
     return (
         <React.Fragment>
             <Hidden smDown>
-                <Link href={"/holiday-specials/"} passHref>
                     <Toolbar className={classes.bannerAd}>
-                        <Typography variant={"h4"} className={classes.text}>Click here to checkout our Black Friday Sales!</Typography>
+                        <Typography variant={"h4"} className={classes.text}>We have Moved locations!</Typography>
+                        <Typography variant={"body1"} className={classes.text}>608 Griffin Dr<br/>
+                        Unit A<br/>
+                        Bozeman, Montana 59715</Typography>
                     </Toolbar>
-                </Link>
             </Hidden>
             <Hidden mdUp>
-                <Link href={"/holiday-specials/"} passHref>
                     <Toolbar className={classes.bannerAd}>
                         <Typography variant={"h4"} className={classes.text}>Tap for Black Friday Sales!</Typography>
                     </Toolbar>
-                </Link>
             </Hidden>
         </React.Fragment>
     );
