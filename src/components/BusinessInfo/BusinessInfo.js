@@ -61,8 +61,9 @@ export default function BusinessInfo(props) {
                 </Hidden>
                 <GridItem xs={12} sm={12} md={3}>
                     <h2 className={classNames(classes.title, classes.centered)} align={"center"}>Location</h2>
-                    <Typography variant={"body1"} className={classes.centered} align={"center"}>6062 Jackrabbit Lane<br/>
-                        Belgrade, Montana 59714
+                    <Typography variant={"body1"} className={classes.centered} align={"center"}>608 Griffin Dr<br/>
+                        Unit A<br/>
+                        Bozeman, Montana 59715
                     </Typography>
                     <div className={classes.center}>
                         <Typography variant={"h6"} component={"p"} className={classNames(classes.title, classes.phone)} align={"center"} justify={"center"}>
