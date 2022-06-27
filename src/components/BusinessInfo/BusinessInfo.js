@@ -40,11 +40,7 @@ export default function BusinessInfo(props) {
                     <Typography variant={"body1"} className={classes.centered}>
                         Tuesday &amp; Wednesday 8:30AM - 5:30PM
                         <br/>
-                        NightOwl: 9:00PM-12:00AM
-                        <br/>
                         Thursday - Saturday 9:00AM - 6:30PM
-                        <br/>
-                        NightOwl: 9:30PM-12:00AM
                         <br/>
                         Closed Sunday &amp; Monday
                     </Typography>
