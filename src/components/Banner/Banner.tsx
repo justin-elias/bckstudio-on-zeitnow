@@ -38,6 +38,7 @@ export default function Banner() {
             <Hidden smDown>
                     <Toolbar className={classes.bannerAd}>
                         <Typography variant={"h4"} className={classes.text}>We have Moved locations!</Typography>
+                        <br/>
                         <Typography variant={"body1"} className={classes.text}>608 Griffin Dr<br/>
                         Unit A<br/>
                         Bozeman, Montana 59715</Typography>
