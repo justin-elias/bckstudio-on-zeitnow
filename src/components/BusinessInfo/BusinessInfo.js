@@ -36,11 +36,11 @@ export default function BusinessInfo(props) {
             <div className={classes.dividerBar}/>
             <GridContainer spacing={0} justify={"center"}>
                 <GridItem xs={12} sm={12} md={3}>
-                    <h2 className={classNames(classes.title, classes.centered)}>HOURS</h2>
+                    <h2 className={classNames(classes.title, classes.centered)}>Gallery Hours</h2>
                     <Typography variant={"body1"} className={classes.centered}>
-                        Tuesday &amp; Wednesday 8:30AM - 5:30PM
+                        Tuesday &amp; Wednesday 10:00AM - 5:30PM
                         <br/>
-                        Thursday - Saturday 9:00AM - 6:30PM
+                        Thursday - Saturday 10:00AM - 6:30PM
                         <br/>
                         Closed Sunday &amp; Monday
                     </Typography>
