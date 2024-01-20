@@ -72,7 +72,7 @@ export default async (req: NowRequest, res: NowResponse) => {
                         console.log("5 sec test timer elapsed");
                         return res.status(req.body.testStatusCode).send("test returned")
                     }, 5000)
-                } catch (error) {
+                } catch (error: any) {
                     errorHandler(error, Severity.Debug);
                 }
             }
@@ -113,7 +113,7 @@ export default async (req: NowRequest, res: NowResponse) => {
                     });
                     return await mailgunInstance.messages().send(data)
                 }
-            } catch (error) {
+            } catch (error: any) {
                 errorHandler(error, Severity.Error);
                 return res.status(502).send("undelivered with error: " + error);
             }
@@ -130,7 +130,7 @@ export default async (req: NowRequest, res: NowResponse) => {
             errorHandler(error, Severity.Error);
             return res.status(502).send("undelivered with error: " + error);
         });
-    }catch (error) {
+    }catch (error: any) {
         errorHandler(error, Severity.Error);
         return res.status(502).send("undelivered with error: " + error);
     }
