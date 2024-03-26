@@ -4,6 +4,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import {Hidden, Typography} from "@material-ui/core";
 import { BckAppProps } from "../../index";
 import Link from "next/link";
+import Button from "@material-ui/core/Button";
+import PrimaryContainedButton from "../Buttons/PrimaryContainedButton";
 
 const useStyles = makeStyles((theme) => createStyles({
     bannerAd: {
@@ -13,9 +15,9 @@ const useStyles = makeStyles((theme) => createStyles({
         position: "absolute",
         zIndex: 3,
         "&:hover": {
-            backgroundColor: "black",
-            color: "white",
-            textColor: "white",
+            //backgroundColor: "black",
+            //color: "white",
+            //textColor: "white",
         },
         [theme.breakpoints.down("sm")]:{
             marginTop: "-0.5rem",
@@ -29,6 +31,9 @@ const useStyles = makeStyles((theme) => createStyles({
         margin: "auto",
         align: "center",
         justify: "center",
+    },
+    link: {
+        color: "white",
     }
 }));
 
@@ -38,20 +43,16 @@ export default function Banner() {
         <React.Fragment>
             <Hidden smDown>
                     <Toolbar className={classes.bannerAd}>
-                        <Typography variant={"h4"} className={classes.text}>We have Moved locations!</Typography>
-                        <br/>
-                        <Typography variant={"body1"} className={classes.text}>608 Griffin Dr<br/>
-                        Unit A<br/>
-                        Bozeman, Montana 59715</Typography>
+                        <Typography variant={"h4"} className={classes.text}>Join Us for a Workshop with Visiting Artist Megan Sprenger</Typography>
+                        <PrimaryContainedButton><a href={'https://bckstudio-book-now.as.me/schedule.php?appointmentType=category%3AVisiting+Artist'} target={'_blank'}>Sign Up for Megan's Workshop</a></PrimaryContainedButton>
+
                     </Toolbar>
             </Hidden>
             <Hidden mdUp>
                     <Toolbar className={classes.bannerAd}>
-<                       Typography variant={"h4"} className={classes.text}>We have Moved locations!</Typography>
-                        <br/>
-                        <Typography variant={"body1"} className={classes.text}>608 Griffin Dr<br/>
-                        Unit A<br/>
-                        Bozeman, Montana 59715</Typography>                    </Toolbar>
+<                       Typography variant={"h4"} className={classes.text}>Join Us for a Workshop with Visiting Artist Megan Sprenger</Typography>
+                        <PrimaryContainedButton><a className={classes.link} href={'https://bckstudio-book-now.as.me/schedule.php?appointmentType=category%3AVisiting+Artist'} target={'_blank'}>Sign Up for Megan's Workshop</a></PrimaryContainedButton>
+                    </Toolbar>
             </Hidden>
         </React.Fragment>
     );
