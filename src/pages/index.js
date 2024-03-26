@@ -68,6 +68,7 @@ export default function homePage(props) {
                       class, or need your own ceramic studio space, Bozeman Community Kiln is here."
                 />
             </Head>
+            <Banner/>
             <Layout>
                 <BrandedHeader>
                     <CLPSection/>

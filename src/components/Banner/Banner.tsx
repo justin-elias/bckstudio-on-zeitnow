@@ -44,7 +44,7 @@ export default function Banner() {
             <Hidden smDown>
                     <Toolbar className={classes.bannerAd}>
                         <Typography variant={"h4"} className={classes.text}>Join Us for a Workshop with Visiting Artist Megan Sprenger</Typography>
-                        <PrimaryContainedButton><a href={'https://bckstudio-book-now.as.me/schedule.php?appointmentType=category%3AVisiting+Artist'} target={'_blank'}>Sign Up for Megan's Workshop</a></PrimaryContainedButton>
+                        <PrimaryContainedButton><a className={classes.link} href={'https://bckstudio-book-now.as.me/schedule.php?appointmentType=category%3AVisiting+Artist'} target={'_blank'}>Sign Up for Megan's Workshop</a></PrimaryContainedButton>
 
                     </Toolbar>
             </Hidden>
