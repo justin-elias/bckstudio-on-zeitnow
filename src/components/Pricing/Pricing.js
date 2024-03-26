@@ -4,12 +4,13 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
-import Grid from "@material-ui/core/Grid";
 import StarIcon from "@material-ui/icons/StarBorder";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
 import classNames from "classnames";
+import GridContainer from "../Grid/GridContainer";
+import GridItem from "../Grid/GridItem";
 
 const useStyles = makeStyles((theme) => ({
     "@global": {
@@ -62,9 +63,9 @@ export default function Pricing(props) {
             <Typography variant={"h2"} align={"center"} className={classes.categoryHeaders}>
                 {title}
             </Typography>
-            <Grid container spacing={5} alignItems={ tierCategory.length > 1 ? "flex-end" : "center"} justify={"center"}>
+            <GridContainer spacing={5} alignItems={"flex-end"} justify={"center"}>
             {tierCategory.membershipTiers.map((tier) => (
-                        <Grid item key={tier.title} xs={12} sm={12} md={4}>
+                        <GridItem key={tier.title} xs={12} sm={12} md={4}>
                             <Card className={classes.cards}>
                                 <CardHeader
                                     title={tier.title}
@@ -93,18 +94,18 @@ export default function Pricing(props) {
                                     </ul>
                                 </CardContent>
                                 <CardActions>
-                                    <Button fullWidth={maxWidth === "sm" ? false : true}
+                                    <Button fullWidth={maxWidth !== "sm"}
                                             variant={tier.buttonVariant}
                                             color="primary"
-                                            href={"https://www.paypal.com/cgi-bin/webscr&cmd=_s-xclick&hosted_button_id="+tier.inputValue}
+                                            href={tier.inputValue}
                                             className={classNames(
                                                 tier.buttonVariant === "contained" ? classes.featuredPriceButton : classes.priceButton)}>
                                         {tier.buttonText}
                                     </Button>
                                 </CardActions>
                             </Card>
-                    </Grid>
+                        </GridItem>
             ))}
-            </Grid>
+            </GridContainer>
     </React.Fragment>);
 }

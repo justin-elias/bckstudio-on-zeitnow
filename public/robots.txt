@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /preview-classes-encounters$
-Disallow: /contact-form$
-Allow: /
-Sitemap: https://bckstudio.com/sitemap.xml

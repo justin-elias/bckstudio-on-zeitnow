@@ -43,6 +43,7 @@ export default function covid19() {
         <div>
             <Head>
                 <title>HOME • Bozeman Community Kiln</title>
+                <link rel="canonical" href="https://bckstudio.com/covid19"/>
                 <meta name="description"
                       content="What is Bozeman Community Kiln doing to help stop the spread of COVID-19?"/>
             </Head>
