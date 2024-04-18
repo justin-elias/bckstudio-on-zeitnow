@@ -36,7 +36,7 @@ export async function getStaticProps(context) {
     const token = preview ? (context.previewData.token + process.env.NEXT_PUBLIC_GRAPH_CMS_PREVIEW_TOKEN_CLIENT) : prodToken;
     const endPoint = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 
-    const staff = {} //await queryCMS(staffQuery, token, endPoint);
+    const staff = await queryCMS(staffQuery, token, endPoint);
 
     return {
         props: { staff, preview }, // will be passed to the page component as props
@@ -72,7 +72,7 @@ export default function homePage(props) {
                 <BrandedHeader>
                     <CLPSection/>
                 </BrandedHeader>
-                {/*<AboutSection staff={shuffledStaff()}/>*/}
+                <AboutSection staff={shuffledStaff()}/>
             </Layout>
         </div>
     );
