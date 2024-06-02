@@ -55,7 +55,7 @@ export default function ContactPage() {
                         Reach Out to Us
                     </Typography>
                 </BrandedHeader>
-                <GridContainer alignItems={"flex-start"} className={classes.container} justify={"space-evenly"}>
+                <GridContainer alignItems={"flex-start"} className={classes.container} justifyContent={"space-evenly"}>
                     <GridItem xs={12} sm={12} md={4}>
                         <ContactForm formTitle={"Email"}/>
                     </GridItem>

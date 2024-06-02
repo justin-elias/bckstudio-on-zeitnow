@@ -18,7 +18,7 @@ export default function SocialMediaInfo() {
     return (
         <div className={classNames(classes.container)}>
             <Typography variant={"h4"} className={classNames(classes.title)}>Find the Latest on Social Media</Typography>
-            <GridContainer spacing={0} justify={"center"}>
+            <GridContainer spacing={0} justifyContent={"center"}>
                 <GridItem xs={2} sm={2} md={1}>
                     <a href={"https://www.facebook.com/BozemanCommunityKiln"} rel="noopener noreferrer" target={"_blank"}>
                         <Image src={"https://media.graphassets.com/8KDmAb7aTjGw6RsxKkIa"} alt={"Follow on Facebook"} className={classes.icon} width={"40px"} height={"40px"}/>

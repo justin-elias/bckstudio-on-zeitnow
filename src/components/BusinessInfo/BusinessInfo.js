@@ -34,7 +34,7 @@ export default function BusinessInfo(props) {
     return (
         <div>
             <div className={classes.dividerBar}/>
-            <GridContainer spacing={0} justify={"center"}>
+            <GridContainer spacing={0} justifyContent={"center"}>
                 <GridItem xs={12} sm={12} md={3}>
                     <h2 className={classNames(classes.title, classes.centered)}>Gallery Hours</h2>
                     <Typography variant={"body1"} className={classes.centered}>

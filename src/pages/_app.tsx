@@ -50,6 +50,8 @@ export default function App(props: BckAppProps) {
     return (
       <React.Fragment>
           <Head>
+            <link rel="icon" type="image/png" sizes="32x32" href={require("../../public/favicon-32x32.png")}/>
+            <link rel="icon" type="image/png" sizes="16x16" href={require("../../public/favicon-16x16.png")}/>
               <meta httpEquiv="Content-Type" content="text/html" charSet="utf-8"/>
               <meta
               name="viewport"
@@ -57,6 +59,9 @@ export default function App(props: BckAppProps) {
               />
               <title>Bozeman Community Kiln • BCKstudio.com</title>
               <link href="https://fonts.googleapis.com/css2?family=Asap:wght@600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet"/>
+              <link rel="mask-icon" href={require("../../public/safari-pinned-tab.svg")} color="#406d7f"/>
+              <link rel="apple-touch-icon" sizes="180x180" href={require("../../public/apple-touch-icon.png")}/>
+
           </Head>
           <ThemeProvider theme={theme}>
               <Component {...pageProps} err={err} />

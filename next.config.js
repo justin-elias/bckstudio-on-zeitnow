@@ -17,11 +17,11 @@ const {
 } = process.env
 
 module.exports = withPlugins([[withSourceMaps]], {
-    future: { webpack5: true },
     // Allow mdx and md files to be pages
     pageExtensions: ['jsx', 'js', 'ts', 'tsx', 'mdx', 'md'],
     // Allowed domains for image optimization
     images: {
+        dangerouslyAllowSVG: true,
         domains: ['media.graphassets.com'],
     },
     async redirects() {
@@ -53,17 +53,7 @@ module.exports = withPlugins([[withSourceMaps]], {
               }
             ]
           },
-            {
-                test: /\.(png|jpe?g|gif|svg)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            emitFile: false,
-                        },
-                    },
-                ],
-            }
+
             )
 
         // In `pages/_app.js`, Sentry is imported from @sentry/node. While

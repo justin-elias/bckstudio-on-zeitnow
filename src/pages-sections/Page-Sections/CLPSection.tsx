@@ -37,7 +37,7 @@ export default function CLPSection() {
   const classes = useStyles();
   return (
       <div>
-        <GridContainer alignItems={"flex-start"} justify={"center"} className={classes.gridContainer}>
+        <GridContainer alignItems={"flex-start"} justifyContent={"center"} className={classes.gridContainer}>
           <GridItem sm={12} md={3}>
             <Typography variant={"h3"} component={"h2"} className={classes.brandFont}>
               CREATE.
@@ -96,7 +96,7 @@ export default function CLPSection() {
           </GridItem>
           <Hidden smDown>
             <GridItem md={12}>
-              <GridContainer justify={"center"} alignItems={"center"}>
+              <GridContainer justifyContent={"center"} alignItems={"center"}>
                 <GridItem md={3}>
                   <PrimaryContainedButton href={"/memberships"} >
                     Come Create
