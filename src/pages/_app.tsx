@@ -10,12 +10,11 @@ import "../assets/scss/nextjs-material-kit.scss?v=1.0.0";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../assets/theme";
 import PageChange from "../components/PageChange/PageChange";
-import * as Sentry from "@sentry/node"
 import { BckAppProps } from "../index";
 
-if (process.env.NODE_ENV === "production") {
-    Sentry.init({dsn: process.env.NEXT_PUBLIC_SENTRY_DSN});
-}
+// if (process.env.NODE_ENV === "production") {
+//     Sentry.init({dsn: process.env.NEXT_PUBLIC_SENTRY_DSN});
+// }
 
 Router.events.on("routeChangeStart", (url) => {
     document.body.classList.add("body-page-transition");
