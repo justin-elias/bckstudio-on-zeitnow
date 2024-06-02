@@ -8,7 +8,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
       <Head>
-          <link rel="manifest" href={require("../../public/manifest.json")}/>
+          <link rel="manifest" href={"manifest.json"}/>
           <meta name="msapplication-TileColor" content="#00aba9"/>
           <meta name="theme-color" content="#ffffff"/>
         </Head>
