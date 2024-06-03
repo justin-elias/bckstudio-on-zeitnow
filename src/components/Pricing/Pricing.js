@@ -63,7 +63,7 @@ export default function Pricing(props) {
             <Typography variant={"h2"} align={"center"} className={classes.categoryHeaders}>
                 {title}
             </Typography>
-            <GridContainer spacing={5} alignItems={"flex-end"} justify={"center"}>
+            <GridContainer spacing={5} alignItems={"flex-end"} justifyContent={"center"}>
             {tierCategory.membershipTiers.map((tier) => (
                         <GridItem key={tier.title} xs={12} sm={12} md={4}>
                             <Card className={classes.cards}>

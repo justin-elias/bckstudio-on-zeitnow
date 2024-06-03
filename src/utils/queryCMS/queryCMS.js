@@ -2,6 +2,7 @@ import {GraphQLClient} from "graphql-request";
 import {print} from 'graphql/language/printer';
 
 export const queryCMS = async (query, token, endPoint) => {
+    if(!token || !endPoint) return [];
     try {
         return await new GraphQLClient(endPoint, {
             headers: {
@@ -9,8 +10,8 @@ export const queryCMS = async (query, token, endPoint) => {
             }
         }).request(print(query));
     }catch (e) {
-
-        return e
+        console.log('queryCMS error', e)
+        return {}
     }
 };
 

@@ -2,28 +2,26 @@
  * Copyright (c) 2020. Bozeman Community Kiln
  */
 import {NowRequest, NowResponse} from "@vercel/node"
-import * as Sentry from "@sentry/node"
-import {Severity} from "@sentry/node"
 import Mailgun from "mailgun-js"
 
 type SendResponse = Mailgun.messages.SendResponse
 type SendData = Mailgun.messages.SendData
 
-if (process.env.NODE_ENV === "production") {
-    Sentry.init({dsn: process.env.SENTRY_DSN});
-}
+// if (process.env.NODE_ENV === "production") {
+//     Sentry.init({dsn: process.env.SENTRY_DSN});
+// }
 
-const errorHandler = (error: ErrorEvent, errorType: Severity) => {
-    if (process.env.NODE_ENV === "production") {
-        Sentry.withScope((scope) => {
-            scope.setLevel(errorType);
-            Sentry.captureException(error);
-        })
-    }
-    else {
-        console.log(error)
-    }
-}
+// const errorHandler = (error: ErrorEvent, errorType: Severity) => {
+//     if (process.env.NODE_ENV === "production") {
+//         Sentry.withScope((scope) => {
+//             scope.setLevel(errorType);
+//             Sentry.captureException(error);
+//         })
+//     }
+//     else {
+//         console.log(error)
+//     }
+// }
 
 export default async (req: NowRequest, res: NowResponse) => {
 
@@ -73,7 +71,7 @@ export default async (req: NowRequest, res: NowResponse) => {
                         return res.status(req.body.testStatusCode).send("test returned")
                     }, 5000)
                 } catch (error: any) {
-                    errorHandler(error, Severity.Debug);
+                    // errorHandler(error, Severity.Debug);
                 }
             }
         }
@@ -85,9 +83,9 @@ export default async (req: NowRequest, res: NowResponse) => {
                 try {
                     console.log("cp: test exception")
                     // error producing function to test sentry implementation
-                    Sentry.captureException("This is an error")
+                    // Sentry.captureException("This is an error")
                 } catch (error) {
-                    Sentry.captureException(error)
+                    // Sentry.captureException(error)
                 }
             }
             const splitEmail = req.body.email.split("@");
@@ -114,7 +112,7 @@ export default async (req: NowRequest, res: NowResponse) => {
                     return await mailgunInstance.messages().send(data)
                 }
             } catch (error: any) {
-                errorHandler(error, Severity.Error);
+                // errorHandler(error, Severity.Error);
                 return res.status(502).send("undelivered with error: " + error);
             }
         };
@@ -127,11 +125,11 @@ export default async (req: NowRequest, res: NowResponse) => {
                 }
             }
         }).catch(error => {
-            errorHandler(error, Severity.Error);
+            // errorHandler(error, Severity.Error);
             return res.status(502).send("undelivered with error: " + error);
         });
     }catch (error: any) {
-        errorHandler(error, Severity.Error);
+        // errorHandler(error, Severity.Error);
         return res.status(502).send("undelivered with error: " + error);
     }
 }

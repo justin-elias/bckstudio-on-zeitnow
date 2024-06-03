@@ -1,7 +1,6 @@
 import React from "react";
 import Document, {Head, Html, Main, NextScript} from "next/document";
 import {ServerStyleSheets} from "@material-ui/styles";
-import ati from "../../public/apple-touch-icon.png"
 import "../utils/favIcons/favIcons"
 
 export default class MyDocument extends Document {
@@ -9,11 +8,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
       <Head>
-          <link rel="apple-touch-icon" sizes="180x180" href={ati}/>
-          <link rel="icon" type="image/png" sizes="32x32" href={require("../../public/favicon-32x32.png")}/>
-          <link rel="icon" type="image/png" sizes="16x16" href={require("../../public/favicon-16x16.png")}/>
-          <link rel="manifest" href={require("../../public/manifest.json")}/>
-          <link rel="mask-icon" href={require("../../public/safari-pinned-tab.svg")} color="#406d7f"/>
+          <link rel="manifest" href={"manifest.json"}/>
           <meta name="msapplication-TileColor" content="#00aba9"/>
           <meta name="theme-color" content="#ffffff"/>
         </Head>

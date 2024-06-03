@@ -4,9 +4,7 @@ module.exports = {
         "es6": true,
         "node": true,
     },
-    "extends": [
-        "airbnb-typescript"
-    ],
+    "extends": ["eslint:recommended", "next"],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"

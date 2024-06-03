@@ -1,4 +1,5 @@
 export default function shuffleArray(array: Array<Object>) {
+    if(!array) return []
     let curId = array.length;
     // There remain elements to shuffle
     while (0 !== curId) {

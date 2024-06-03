@@ -89,7 +89,7 @@ export default function AboutSection(props) {
   return (
     <div className={classes.section}>
       <Typography variant={"h3"} className={classes.title}>ABOUT BOZEMAN COMMUNITY KILN</Typography>
-        <GridContainer alignItems={"flex-start"} justify={"center"}>
+        <GridContainer alignItems={"flex-start"} justifyContent={"center"}>
           <GridItem xs={12} sm={12} md={8}>
             <Typography variant={"body1"}>
               Bozeman Community Kiln invites you to come create, learn, and play with ceramic clay. Members enjoy a relaxed,

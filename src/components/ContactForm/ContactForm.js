@@ -19,7 +19,6 @@ import GridItem from "../Grid/GridItem";
 import styles from "src/assets/jss/nextjs-material-kit/components/headerLinksStyle"
 import classNames from "classnames";
 import axios from "axios";
-import * as Sentry from "@sentry/node"
 
 const useStyles = makeStyles((theme) => ({
     ...styles,
@@ -72,10 +71,10 @@ export default function ContactForm(props) {
 
     const errorHandler = (error) => {
         if (process.env.NEXT_PUBLIC_SENTRY_DSN){
-            Sentry.withScope(function(scope) {
-                scope.setLevel("error");
-                Sentry.captureException(error);
-            })
+            // Sentry.withScope(function(scope) {
+            //     scope.setLevel("error");
+            //     Sentry.captureException(error);
+            // })
         }
         else {
             console.log(error)
