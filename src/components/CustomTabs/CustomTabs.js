@@ -20,8 +20,8 @@ const useStyles = makeStyles(styles);
 export default function CustomTabs(props) {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, value) => {
-    setValue(value);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
   };
   const classes = useStyles();
   const { headerColor, plainTabs, tabs, title, rtlActive } = props;

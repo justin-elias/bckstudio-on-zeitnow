@@ -10,7 +10,7 @@ import {Hidden} from "@material-ui/core";
 // @material-ui/icons
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 // core components
-import Button from "../CustomButtons/Button.js";
+import Button from "../CustomButtons/RegularButton.js";
 
 import styles from "src/assets/jss/nextjs-material-kit/components/headerLinksStyle.js";
 import {primaryColor} from "../../assets/jss/nextjs-material-kit";
@@ -64,20 +64,20 @@ export default function HeaderLinks() {
                   </Link>
               </ListItem>
               <ListItem className={classes.listItem} color={primaryColor}>
-                  <Link href={"/classes-encounters"} passHref>
+                  <Link href={"/classes/"} passHref>
                       <Button
                           color="transparent"
                           className={classes.navLink}
-                      ><Typography variant={"body1"} className={classes.navText}>Classes & Encounters</Typography>
+                      ><Typography variant={"body1"} className={classes.navText}>Classes</Typography>
                       </Button>
                   </Link>
               </ListItem>
               <ListItem className={classes.listItem} color={primaryColor}>
-                  <Link href={"/studios"} passHref>
+                  <Link href={"/encounters"} passHref>
                       <Button
                           color="transparent"
                           className={classes.navLink}
-                      ><Typography variant={"body1"} className={classes.navText}>Studio Rentals</Typography>
+                      ><Typography variant={"body1"} className={classes.navText}>Encounters</Typography>
                       </Button>
                   </Link>
               </ListItem>
@@ -91,19 +91,19 @@ export default function HeaderLinks() {
                   </Link>
               </ListItem>
               <ListItem className={classes.listItem} color={"#F00"}>
-                  <Link href={"/covid19"} passHref>
+                  <Link href={"/faq"} passHref>
                       <Button
                           color="transparent"
                           className={classes.navLink}
-                      ><Typography variant={"body1"} className={classes.navText}>COVID Updates</Typography>
+                      ><Typography variant={"body1"} className={classes.navText}>FAQ Page</Typography>
                       </Button>
                   </Link>
               </ListItem>
-              <ListItem className={classes.listItem}>
-                  <Hidden smDown>
+              <Hidden mdDown>
+                  <ListItem className={classes.listItem}>
                       <BookServiceDialog buttonText={"Book Now"} className={classNames(classes.navLink)}/>
-                  </Hidden>
-              </ListItem>
+                  </ListItem>
+              </Hidden>
           </List>
       </nav>
   );
