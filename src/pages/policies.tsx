@@ -2,7 +2,7 @@ import { queryCMS } from "../utils/queryCMS";
 import Head from "next/head";
 import Layout from "../pages-sections/Page-Sections/Layout";
 import BrandedHeader from "../components/BrandedHeader/BrandedHeader";
-import { gql } from "graphql-request";
+import gql from "graphql-tag";
 import { Typography } from "@material-ui/core";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import { brandFont, playBrand } from "../assets/jss/nextjs-material-kit";
@@ -41,6 +41,17 @@ const policiesQuery = gql`
     }
   }
 `;
+// const policiesQuery = gql`
+//   {
+//     policies {
+//       policyName
+//       policyText {
+//         markdown
+//       }
+//       updatedAt
+//     }
+//   }
+// `;
 const options = {
   overrides: {
     h1: {
