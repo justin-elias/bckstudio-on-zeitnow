@@ -39,6 +39,9 @@ const NextConfig = {
           },
 
             )
+        if (process.env.NODE_ENV === "development") {
+      config.devtool = 'source-map';
+    }
         return config;
 
   //       // In `pages/_app.js`, Sentry is imported from @sentry/node. While
