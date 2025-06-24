@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020. Bozeman Community Kiln
+ * Copyright (c) 2025. Bozeman Community Kiln
  */
 
 /// <reference types="node_modules/@types/use-global-hook/index.d.ts" />
