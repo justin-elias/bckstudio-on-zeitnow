@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     },
     titleContainer: {
         backgroundColor: theme.palette.secondary.main,
-        textAlign: "start",
         height: "fit-content",
         borderRadius: "0.3rem"
 
