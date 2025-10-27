@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     titleContainer: {
         backgroundColor: theme.palette.secondary.main,
-        height: "20vh",
+        height: "fit-content",
         borderRadius: "0.3rem"
 
     },
@@ -116,7 +116,7 @@ export default function ClassList(props) {
             <Typography variant={"h2"} align={"center"} className={classes.categoryHeaders} id={title === "Encounters" ? "play" : ""} name={title === "Encounters" ? "play" : ""}>
                 {title}
             </Typography>
-            <Typography variant={"body1"} align={"center"} className={classes.textBody}>
+            <Typography variant={"h3"} align={"center"} className={classes.textBody}>
                 {classList.description}
             </Typography>
         </div>
