@@ -97,7 +97,7 @@ const style = (theme) => ({
 const useStyles = makeStyles(style);
 
 const classCategories = gql`{
-    classCategories {
+    classCategories(orderBy: index_ASC) {
         categoryTitle
         description
         classes{
