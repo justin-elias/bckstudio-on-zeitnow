@@ -23,7 +23,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
     height: "fit-content",
     borderRadius: "0.3rem",
+    scrollMarginTop: "60px",
   },
+  titleContainerNoBackground: { scrollMarginTop: "60px" },
   classHeaders: {
     ...brandFont,
     color: "#555",
@@ -70,6 +72,9 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     margin: "15%",
+  },
+  categoryContainer: {
+    scrollMarginTop: "60px",
   },
 }));
 
@@ -118,12 +123,12 @@ export default function ClassList(props) {
     if (index !== 0) {
       return classes.titleContainer;
     }
-    return null;
+    return classes.titleContainerNoBackground;
   };
   console.log(classes);
   return (
     <React.Fragment>
-      <div className={setBackgroundColor()} id={classList.linkId}>
+      <div className={`${setBackgroundColor()} `} id={classList.linkId}>
         <Typography
           variant={"h2"}
           align={"center"}
