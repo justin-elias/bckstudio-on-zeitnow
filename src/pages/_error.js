@@ -1,5 +1,4 @@
-import NextErrorComponent from "next/error"
-import * as Sentry from "@sentry/node"
+import NextErrorComponent from 'next/error'
 import React from "react";
 
 const MyError = ({ statusCode, hasGetInitialPropsRun, err }) => {
@@ -7,7 +6,7 @@ const MyError = ({ statusCode, hasGetInitialPropsRun, err }) => {
         // getInitialProps is not called in case of
         // https://github.com/vercel/next.js/issues/8592. As a workaround, we pass
         // err via _app.js so it can be captured
-        Sentry.captureException(err)
+        // Sentry.captureException(err)
     }
 
     return <NextErrorComponent statusCode={statusCode} />
@@ -41,21 +40,20 @@ MyError.getInitialProps = async ({ res, err, asPath }) => {
         return { statusCode: 404 }
     }
     if (err) {
-        Sentry.captureException(err)
-        return errorInitialProps
+        // Sentry.captureException(err)
+        // await Sentry.flush(2000)
+        // return errorInitialProps
     }
 
     // If this point is reached, getInitialProps was called without any
     // information about what the error might be. This is unexpected and may
     // indicate a bug introduced in Next.js, so record it in Sentry
-    Sentry.captureException(
-        new Error(`_error.js getInitialProps missing data at path: ${asPath}`)
-    )
+    // Sentry.captureException(
+    //     new Error(`_error.js getInitialProps missing data at path: ${asPath}`)
+    // )
+    // await Sentry.flush(2000)
 
     return errorInitialProps
 }
 
 export default MyError
-
-
-

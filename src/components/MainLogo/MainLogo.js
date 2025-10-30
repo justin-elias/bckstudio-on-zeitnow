@@ -2,10 +2,8 @@ import styles from "src/assets/jss/nextjs-material-kit/components/mainLogoStyle"
 import {Hidden, makeStyles} from "@material-ui/core";
 import GridContainer from "../Grid/GridContainer";
 import GridItem from "../Grid/GridItem";
-import kilnLogo from "../../assets/img/bck/svg/bckHorizontalLogo.svg";
 import React from "react";
-import classNames from "classnames";
-import BookServiceDialog from "../BookServiceDialog/BookServiceDialog";
+import Image from "next/image";
 
 const style = {
     ...styles,
@@ -22,11 +20,8 @@ export default function MainLogo() {
         <div className={classes.container}>
             <GridContainer>
                 <GridItem xs={12} sm={12} md={6}>
-                    <Hidden smDown implementation={"js"}>
-                        <img src={kilnLogo} alt={"Bozeman Community Kiln"} height={"197px"}/>
-                    </Hidden>
-                    <Hidden mdUp implementation={"js"}>
-                        <BookServiceDialog className={classNames(classes.heroButton)} buttonText={"Book Now"}/>
+                    <Hidden smDown>
+                        <Image src={"https://media.graphassets.com/XMAKIRSSVyM1QPf2Y8hG"} alt={"Bozeman Community Kiln"} height={"197"} width={"704"}/>
                     </Hidden>
                 </GridItem>
             </GridContainer>

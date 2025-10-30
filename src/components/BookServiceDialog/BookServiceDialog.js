@@ -8,12 +8,13 @@ import {Close} from "@material-ui/icons";
 // core components
 import {container} from "src/assets/jss/nextjs-material-kit.js";
 import {Dialog, DialogContent, DialogTitle, Fade, IconButton, Toolbar} from "@material-ui/core";
-import CustomButtons from "../CustomButtons/Button";
 import styles from "src/assets/jss/nextjs-material-kit/components/headerLinksStyle"
 import Typography from "@material-ui/core/Typography";
 import AcuityScheduler from "../../pages-sections/Page-Sections/AcuityScheduler";
 import GridContainer from "../Grid/GridContainer";
 import GridItem from "../Grid/GridItem";
+import PrimaryContainedButton from "../Buttons/PrimaryContainedButton";
+import {logModalView} from "../../utils/analytics/analytics";
 
 const useStyles = makeStyles((theme) => ({
     ...styles,
@@ -27,12 +28,10 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.secondary.contrastText
     },
     bookButton: {
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.primary.contrastText,
-        marginLeft: "1rem",
         marginTop: "0",
         [theme.breakpoints.down("md")]: {
-            marginTop: "auto"
+            margin: "auto"
+
         },
     },
     title:{
@@ -48,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     },
     navText: {
         fontWeight: "700"
+    },
+    centered: {
+        margin: "auto"
     }
 }));
 
@@ -57,26 +59,41 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function BookServiceDialog(props) {
     const classes = useStyles();
-    const { buttonText, src} = props;
+    const { buttonText, src, size} = props;
     const [open, setOpen] = React.useState(false);
     const handleClose = () => {
         setOpen(false);
     };
-    const handleToggle = () => {
+    const handleOpen = (serviceName) => {
+        logModalView(serviceName)
         setOpen(!open);
     };
+    const button = () => {
+        if(size === "xs") {
+            return
+        }
+        return (
+            <div className={classes.centered}>
+                <PrimaryContainedButton
+                    aria-label={"book service"}
+                    className={classNames(classes.navLink,classes.bookButton)}
+                    id={"book-header"}
+                    onClick={() => {
+                        handleOpen(buttonText)
+                    }}
+                    size={"small"}
+                >
+                    <div className={classes.buttonText}>
+                        <Typography variant={"body1"} className={classes.navText}>{buttonText}</Typography>
+                    </div>
+                </PrimaryContainedButton>
+            </div>
+        )
+    }
     return (
         <div>
-            <CustomButtons
-                aria-label={"book service"}
-                className={classNames(classes.navLink,classes.bookButton)}
-                id={"book-header"}
-                onClick={handleToggle}
-            >
-                <div className={classes.buttonText}>
-                    <Typography variant={"body1"} className={classes.navText}>{buttonText}</Typography>
-                </div>
-            </CustomButtons>
+            {button()}
+
             <Dialog fullScreen open={open} onBackdropClick={handleClose} TransitionComponent={Transition}>
                 <DialogTitle className={classes.appBar}>
                     <Toolbar>

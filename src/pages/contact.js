@@ -40,11 +40,12 @@ const useStyles = makeStyles(style);
 
 export default function ContactPage() {
     const classes = useStyles();
-    const gKey = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJrb7LA0RJRVMRLThXYkgPKbk&key=" + process.env.NEXT_PUBLIC_MAPS_KEY;
+    const gKey = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJAzRZ7TxERVMRoCq4nBbxjJQ&key=" + process.env.NEXT_PUBLIC_MAPS_KEY;
     return (
         <div>
             <Head>
                 <title>CONTACT US • Bozeman Community Kiln</title>
+                <link rel="canonical" href="https://bckstudio.com/contact/"/>
                 <meta name="description"
                       content="Let's connect! Reach your community pottery studio via phone or email from our contact page or visit us in Belgrade next to Stockman Bank."/>
             </Head>
@@ -54,7 +55,7 @@ export default function ContactPage() {
                         Reach Out to Us
                     </Typography>
                 </BrandedHeader>
-                <GridContainer alignItems={"flex-start"} className={classes.container} justify={"space-evenly"}>
+                <GridContainer alignItems={"flex-start"} className={classes.container} justifyContent={"space-evenly"}>
                     <GridItem xs={12} sm={12} md={4}>
                         <ContactForm formTitle={"Email"}/>
                     </GridItem>

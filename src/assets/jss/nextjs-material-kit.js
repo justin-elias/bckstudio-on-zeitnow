@@ -63,7 +63,7 @@ const defaultFont = {
 };
 const brandFont = {
   fontFamily: "Merriweather Sans, sans-serif",
-  fontWeight: "700",
+  fontWeight: 700,
   color: "#333"
 };
 const primaryBoxShadow = {

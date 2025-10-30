@@ -1,49 +1,82 @@
 import React from "react";
-// core components
-import Header from "../../components/Header/Header.js";
-import HeaderLinks from "../../components/Header/HeaderLinks.js";
-import {ParallaxBanner} from "react-scroll-parallax"
-// Images
-import heroImg1 from "src/assets/img/bck/darkened-wheel-using-rib/Bozeman-Community-Kiln-design-21-darkened.jpg";
+import LargeHeader from "../../components/Header/LargeHeader";
+import HeaderLinks from "../../components/Header/HeaderLinks";
 import MainLogo from "../../components/MainLogo/MainLogo";
+import { Hidden, Typography } from "@material-ui/core";
+import SmallHeader from "../../components/Header/SmallHeader";
+import Image from "next/image";
+import { createStyles, makeStyles} from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => createStyles({
+    banner: {
+        maxWidth: "1442px",
+        margin: "auto",
+    },
+    lgLogo: {
+        marginTop: "-20rem",
+        marginBottom: "5rem"
+    },
+    mdLogo: {
+        marginTop: "-15rem",
+        marginBottom: "5rem"
+    },
+
+}))
 
 export default function HeaderSection(props) {
-    const { noParallax, ...rest } = props;
+    const { noParallax, ...rest} = props;
+    const classes = useStyles();
 
     return (
         <div>
-            <Header
+            <Hidden mdDown>
+            <LargeHeader
                 color="transparent"
-
                 rightLinks={<HeaderLinks role={"navigation"}/>}
                 fixed
-                logoType="nav_logo_lg"
                 changeColorOnScroll={noParallax === undefined ? {
                     height: 50,
                     color: "white",
-                    logoType: "nav_logo_sm"
                 } : {
                     height: -200,
                     color: "white",
-                    logoType: "nav_logo_sm"
                 }}
                 {...rest}
             />
-            <ParallaxBanner
-                layers={[
-                    {
-                        image: heroImg1,
-                        amount: 0.2
-                    },
-                    {
-                        children: <MainLogo/>,
-                        amount: 0.0,
-                        props: {style: {marginTop: "6rem", textAlign: "center"}}
-                    }
+            </Hidden>
+            <Hidden smUp>
+                <SmallHeader
+                    color="white"
+                    rightLinks={<HeaderLinks role={"navigation"}/>}
+                    fixed
+                    size={"xs"}
+                    {...rest}
 
-                ]}
-            >
-            </ParallaxBanner>
+                />
+            </Hidden>
+            <Hidden lgUp xsDown>
+                <SmallHeader
+                    color="white"
+                    rightLinks={<HeaderLinks role={"navigation"}/>}
+                    fixed
+                    {...rest}
+                />
+            </Hidden>
+            <div className={classes.banner}>
+                <Hidden smDown>
+                    <Image src={"https://media.graphassets.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} priority/>
+                </Hidden>
+                <Hidden mdDown>
+                    <div className={classes.lgLogo}>
+                        <MainLogo/>
+                    </div>
+                </Hidden>
+                <Hidden smDown lgUp>
+                    <div className={classes.mdLogo}>
+                        <MainLogo/>
+                    </div>
+                </Hidden>
+            </div>
         </div>
     )
 }

@@ -5,6 +5,7 @@ import {makeStyles} from "@material-ui/core/styles";
 // @material-ui/icons
 import {Close} from "@material-ui/icons";
 // core components
+import Image from "next/image";
 import {container} from "src/assets/jss/nextjs-material-kit.js";
 import {Dialog, DialogContent, DialogTitle, Fade, IconButton, Toolbar} from "@material-ui/core";
 import styles from "src/assets/jss/nextjs-material-kit/components/headerLinksStyle"
@@ -86,7 +87,7 @@ export default function InstrBioDialog(props) {
                 <DialogContent>
                     <GridContainer align={"center"}>
                         <GridItem xs={12} md={12}>
-                            <img src={instructor.headshotImage.url} alt={instructor.firstName} className={classes.bioImg}/>
+                            <Image src={instructor.headshotImage.url} width={instructor.headshotImage.width} height={instructor.headshotImage.height} alt={instructor.headshotImage.altText} className={classes.bioImg}/>
                         </GridItem>
                         <GridItem xs={12} md={12}>
                             <Typography variant={"body1"}>
